@@ -1,5 +1,13 @@
 //// About the files in this folder
 
+/// Differences betweent the two models
+
+The difference between the two models is that BEST has a Dropout layer set at 0.3 (means disable 30% of neurons).
+
+Also, both models have an early_stop applied:
+--For BEST, patience = 7
+--For BETTER, patience = 4
+
 /// 00-00-template-CNN-test-BETTER.ipynb
 
 Test Loss: 0.40689772367477417
