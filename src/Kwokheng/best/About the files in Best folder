@@ -65,3 +65,9 @@ RandAugment layer has access to all 14 of the image augmentation operations avai
 num_ops is the number of image augmentation operations that will be run during each epoch. The augmentation operations are randomly chosen by RandAugment for each epoch. This means that the specific operations for epoch 1 will be different from epoch 2, for example.
 
 factor is the aggressiveness of the operation in transforming the images. Higher levels lead to higher distortions.
+
+/// Preprocessing of images
+
+First I checked the aspect ratios of all images to see if they share the same aspect ratio.
+
+Because the aspect ratios vary, I padded the images with black pixels and then cropped them to squares and resized to 150 x 150.
