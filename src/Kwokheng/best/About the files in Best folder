@@ -51,3 +51,17 @@ I picked them based on the following factors:
 3. The count of epochs where val_accuracy is at least 0.90. I took the higher count to mean that the model is better at learning the dataset and that the performance is more stable
 
 4. The various experiment iterations have one setting or two settings that are adjusted. If the adjustment produces a better max val_accuracy or a higher count of epochs >= 0.90, then that model is better. Through all my experiments, only adding Dropout layer at 0.30 produced a positive effect on val_accuracy, hence the BEST model with Dropout at 0.30 is included in this folder. But in terms of Test Accuracy, both BETTER and BEST are the same. Just that Test Loss and Test Precision scores are better for the BEST model
+
+These are the settings I experimented with:
+1. # of epochs
+2. Dropout layer value
+3. RandAugment factor
+4. Learning rate
+
+/// About RandAugment layer
+
+RandAugment layer has access to all 14 of the image augmentation operations available as separate layers in the Image Augmentation Layer API.
+
+num_ops is the number of image augmentation operations that will be run during each epoch. The augmentation operations are randomly chosen by RandAugment for each epoch. This means that the specific operations for epoch 1 will be different from epoch 2, for example.
+
+factor is the aggressiveness of the operation in transforming the images. Higher levels lead to higher distortions.
